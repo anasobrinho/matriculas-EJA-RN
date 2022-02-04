@@ -31,7 +31,7 @@ server <- function(input, output) {
   
   output$downloadtable = downloadHandler(
     filename = function()
-    {paste("Modelo", ".csv")},
+    {paste("Modelo", ".csv", sep = "")},
     content = function(file){
       #frame = read.table("sm15.txt")
       #tab()
@@ -1046,7 +1046,3 @@ server <- function(input, output) {
 }
 
 
-
-
-
-shinyApp(ui, server)

@@ -11,7 +11,3 @@ library(tmap)
 library(brazilmaps)
 library(viridisLite)
 
-#source("ui.R")
-#source("server.R")
-
-#shinyApp(ui, server)
