@@ -82,7 +82,7 @@ ui <- navbarPage("ANALISADOR DE DADOS DE MATRÍCULAS REALIZADAS NA EDUCAÇÃO DE
                           )),
                  
                  
-                 tabPanel("Impotação dos dados", tabName = "importDados", icon = icon("folder-open"),
+                 tabPanel("Importação dos dados", tabName = "importDados", icon = icon("folder-open"),
                           titlePanel("Carregamento dos dados"),
                           hr(),
                           fileInput("file1", "Selecione um arquivo .csv",
@@ -151,8 +151,10 @@ ui <- navbarPage("ANALISADOR DE DADOS DE MATRÍCULAS REALIZADAS NA EDUCAÇÃO DE
                                                                          choices = list("Todas as DIREDs","1","2","3",
                                                                                         "4","5","6","7","8","9","10","11",
                                                                                         "12","13","14","15","16")),
-                                                             numericInput("listaAno", "Ano", value = 2020, min = 1990, 
+                                                             numericInput("listaAno", "Ano", value = ifelse(exists("dados"), max(dados$Ano), 2020), min = 1990, 
                                                                           max = 3000))
                                                
                                      ))
                  ))
+
+
