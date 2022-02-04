@@ -151,8 +151,7 @@ ui <- navbarPage("ANALISADOR DE DADOS DE MATRÍCULAS REALIZADAS NA EDUCAÇÃO DE
                                                                          choices = list("Todas as DIREDs","1","2","3",
                                                                                         "4","5","6","7","8","9","10","11",
                                                                                         "12","13","14","15","16")),
-                                                             numericInput("listaAno", "Ano", value = ifelse(exists("dados"), max(dados$Ano), 2020), min = 1990, 
-                                                                          max = 3000))
+                                                             numericInput("listaAno", "Ano", value = 2020, min = 1990, max = 3000))
                                                
                                      ))
                  ))
