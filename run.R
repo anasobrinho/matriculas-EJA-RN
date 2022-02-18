@@ -10,6 +10,15 @@ library(tmap)
 #devtools::install_github("rpradosiqueira/brazilmaps"
 library(brazilmaps)
 library(viridisLite)
+library(units)
+library(sf)
+library(leaflet)
+library(leafsync)
+library(lwgeom)
+library(leafem)
+library(raster)
+library(stars)
+library(tmaptools)
 
 port <- Sys.getenv('PORT')
 
